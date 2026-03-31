@@ -1,0 +1,12 @@
+Docker setup
+
+1. Copy `.env.example` to `.env`.
+2. Fill in all Keycloak and Druid values in `.env`.
+3. Build and run:
+   - `docker compose up --build`
+4. Open:
+   - `http://localhost:8080`
+
+Notes
+- Keycloak values (`VITE_*`) are frontend build-time variables, so changes require rebuild.
+- Druid values are backend environment variables from `.env`.

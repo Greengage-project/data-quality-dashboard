@@ -1,0 +1,113 @@
+.info-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.hover-label-geo-location {
+    position: relative;
+}
+
+.hover-label-geo-location:hover::after {
+    content: "Point to fields in the dataset that represent latitude and longitude.";
+    white-space: pre-wrap;
+    position: absolute;
+    background-color: #000b;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    top: 100%; /* label position setting : 100% -label will be displayed below the cursor */
+    left: 0;  /* label position setting : 0 -label will be displayed at the left of the cursor */
+    transform: translateX(0%); /* adjust message horizontally */
+    width: 150%; /* set the width of the message box*/
+}
+
+.hover-label-no-timestamp-duplicates {
+    position: relative;
+}
+
+.hover-label-no-timestamp-duplicates:hover::after {
+    content: "This might mean that there is no category field in the selected dataset.\A Dimension filtering is not necessary.";
+    white-space: pre-wrap;
+    font-style: normal;
+    position: absolute;
+    background-color: #000b;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    top: 100%;
+    left: 0;
+    transform: translateX(0%); /* adjust message horizontally */
+    width: 25vw;/* set the width of the message box*/
+    z-index: 9999;
+
+}
+
+.hover-label-timestamp-duplicates-dataset {
+    position: relative;
+}
+
+.hover-label-timestamp-duplicates-dataset:hover::after {
+    content: "This could indicate that a certain column represents categories (e.g., unique sensors or locations). It's possible for multiple unique values within a dataset to share the same timestamp. Consider adding a dimension filter from a field that you know that represents a category.\A\AImportant Note: The intended data quality dashboard input is a single DateTime + Field value pair. Detected duplicate timestamps will affect the 'Uniqueness' quality score.";
+    white-space: pre-wrap;
+    font-style: normal;
+    position: absolute;
+    background-color: #000b;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    top: 100%;
+    left: 0;
+    transform: translateX(0%); /* adjust message horizontally */
+    width: 25vw;/* set the width of the message box*/
+    z-index: 9999;
+}
+
+.hover-label-timestamp-duplicates-dataset-and-dimension {
+    position: relative;
+}
+
+.hover-label-timestamp-duplicates-dataset-and-dimension:hover::after {
+    content: "This ould indicate that a variable has a 2nd level of categorization, or the dataset containes duplicate records and needs to be quality checked.\A\AImportant Note: The intended data quality dashboard input is a single DateTime + Field value pair. Detected duplicate timestamps will affect the 'Uniqueness' quality score.";
+    white-space: pre-wrap;
+    font-style: normal;
+    position: absolute;
+    background-color: #000b;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    top: 100%;
+    left: 0;
+    transform: translateX(0%); /* adjust message horizontally */
+    width: 25vw;/* set the width of the message box*/
+    z-index: 9999;
+}
+
+
+.ant-input-number-input-wrap {
+    padding-right: 18px;
+}
+
+.ant-input-number-input-wrap > input.ant-input-number-input {
+    text-align: right;
+}
+
+
+
+.missing-data-legend {
+    background-color: #0000ff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

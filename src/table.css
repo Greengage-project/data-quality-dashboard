@@ -1,0 +1,54 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.customDatePickerWidth,
+.customDatePickerWidth > div.react-datepicker-wrapper,
+.customDatePickerWidth > div > div.react-datepicker__input-container,
+.customDatePickerWidth > div > div.react-datepicker__input-container input {
+    width: 100%;
+}
+
+
+.vertical-line {
+    border-right: 1px solid #ccc; /* Add a border to the right of each cell */
+    padding-right: 5px; /* Add some padding to separate the content from the border */
+}
+.ag-theme-alpine {
+    --ag-grid-size: 5px;
+}
+
+
+/* Antd container boxes for cards */
+.ant-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.ant-card:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.ant-card-head {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 12px;
+    min-height: 40px;
+}
+
+.ant-card-head-title {
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
