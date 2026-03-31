@@ -11,9 +11,8 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-
-const DRUID_URL = process.env.DRUID_URL || 'https://druid.greengage-project.eu/druid/v2/';
-const DRUID_AUTHORIZATION = process.env.DRUID_AUTHORIZATION 
+const DRUID_URL = process.env.DRUID_URL || 'https://your-druid-host/druid/v2/';
+const DRUID_AUTHORIZATION = process.env.DRUID_AUTHORIZATION || 'Basic your_druid_basic_auth_username:your_druid_basic_auth_password'
 
 const druidRouter = express.Router();
 
